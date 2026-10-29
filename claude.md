@@ -113,12 +113,12 @@ Format, one block per chapter:
 ```
 
 ### Chapter 1: The Node.js Platform
-- Status: questions reviewed
-- Avg answer score: n/a
-- Last session: 2026-10-28, Q-REVIEW (plus a side Q on epoll / event-loop blocking)
-- Next review: n/a
-- Weak spots: initially read "blocking the loop" as the thread being asleep; it's busy running JS while ready events queue up
-- Strong spots: grasped kernel does the waiting, demux returns as soon as any fd is ready (not all)
+- Status: answers reviewed (TS types half + CJS/ESM unanswered; CJS/ESM deferred to ch2)
+- Avg answer score: 2.3 (10 graded)
+- Last session: 2026-10-29, A-REVIEW
+- Next review: 2026-10-31 (rewrite reactor/demux/non-blocking answers first)
+- Weak spots: reactor pattern (no step-by-step), non-blocking vs demux conflated, "I/O tells the OS" backwards, libuv = C not C++ and does more than epoll, event loop "constantly looping" (it blocks on demux), @types/.d.ts unanswered
+- Strong spots: own-thinking on small core evolving (test runner), dependency tree diagram, architecture layers diagram correct
 - Suggested new Qs: process exit/active handles, single thread → no in-process race conditions, browser vs Node runtime, native code/Wasm
 
 ## Learner profile (you update this)
@@ -130,3 +130,5 @@ Patterns you notice across sessions in how I read, question, and explain. Keep t
 - Habit taught (ch1): turn "What is X?" into "What problem forced X to exist, and what does it cost?"
 - Asks for step-by-step mechanism when the book stays at behavior level. Good sign; feed it with timelines.
 - Notes file is `NodeJSDesignPatternsNotes.md` (renamed 2026-10-28).
+- Ch1 answers: strong when writing own opinion (small core), thin on the core-mechanism answers (reactor, demux, event loop). Understands more in chat than lands on paper; answers stop at a definition. Push "write the steps in order."
+- Several answers left half-finished (libuv sentence cut off, TS types part blank). Encourage finishing before A-REVIEW or flagging "unanswered."

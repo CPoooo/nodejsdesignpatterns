@@ -1,5 +1,6 @@
 attempt at using SQ3R (survery, question, read, recite, review)
 
+---
 # Chapter 1
 
 ## What is the nodejs philosophy (What 3 things are small and why?)
@@ -50,14 +51,22 @@ The complete recipe takes advantage of all the pieces we have just mentioned (an
 *nodejs_complete_recipe_diagram.excalidraw* 
 
 ## How does Typescript work inside modern node.js? And how do you use the types package? What do most type packages look like for a library? Where do they come from? 
+There are a few ways to use typescript inside of nodejs. 
+You can use the tsc -- typescript compiler to compile the typescript into a javascript file (will need a tsconfig.json) and then from there just run node *compiled-file.js*
+
+tsx
+nodejs also allows you to run typescript directly (when using erasable types ONLY, no tsconfig.json used)
 
 ## What is the difference between commonjs and esm? And how does this effect the module system in nodejs. (is there a difference in the browser here?)
 
+Commonjs is the original syntax for modules and esm is the ECMA Script modules (newer syntax import/export)
 
 ---
 # Chapter 2 - Modules
 
 Fun challenge (not relevant to modern day): can you implement the old school 'revealing module' pattern, and what is IIFE?
+IIFE: "immediately invoked function expression"
+*answer to this challenge in iife.js*
 
 Explain the difference between ESM and CommonJS modules 
 
